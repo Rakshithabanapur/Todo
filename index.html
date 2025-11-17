@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Todo app</h1>
+    <br>
+    <!-- <form>
+    <input type="textbox" required>
+    <button type="button">submit</button>
+    </form> -->
+    <form onsubmit="showAlertMessage(); return false;">
+        <label for="myInput">Enter something:</label>
+        <input type="text" id="myInput" name="myInput">
+        <button type="submit">Submit</button>
+    </form>
+<div class="list">
+    <input type="checkbox"> 
+    <h3>Complete daily notes</h3>
+</div>
+<div class="list">
+    <input type="checkbox"> 
+    <h3>Assessment</h3>
+</div>
+<div class="list">
+    <input type="checkbox"> 
+    <h3>Daily Task</h3>
+</div>
+<div class="list">
+    <input type="checkbox"> 
+    <h3>Read Linux</h3>
+</div>
+</body>
+</html>
