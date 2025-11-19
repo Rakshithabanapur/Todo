@@ -7,10 +7,10 @@
 </head>
 <body>
     <h1>Todo app</h1>
-    <br>
-    <form>
+    <form onsubmit="addTodo(event)">
+    <label for="task">Enter Task:</label>
     <input type="textbox" required>
-    <button type="button">submit</button>
+    <button type="button" onclick="showalert()">Add</button>
     </form>
 <div class="list">
     <input type="checkbox"> 
@@ -28,5 +28,10 @@
     <input type="checkbox"> 
     <h3>Read Linux</h3>
 </div>
+<script>
+    function showalert(){
+        alert("Added succesfully!")
+    }
+</script>
 </body>
 </html>

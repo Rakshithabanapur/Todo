@@ -1,8 +1,13 @@
 .list {
   display: flex;
-
 }
+
 body{
     align-items: center;
-    
-}
+    /* display:flex;
+    flex-direction: column; */
+    color:black;
+    background-color: aliceblue;
+} 
+
+
