@@ -2,36 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todo app</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Todo app</h1>
-    <form onsubmit="addTodo(event)">
-    <label for="task">Enter Task:</label>
-    <input type="textbox" required>
-    <button type="button" onclick="showalert()">Add</button>
-    </form>
-<div class="list">
-    <input type="checkbox"> 
-    <h3>Complete daily notes</h3>
-</div>
-<div class="list">
-    <input type="checkbox"> 
-    <h3>Assessment</h3>
-</div>
-<div class="list">
-    <input type="checkbox"> 
-    <h3>Daily Task</h3>
-</div>
-<div class="list">
-    <input type="checkbox"> 
-    <h3>Read Linux</h3>
-</div>
-<script>
-    function showalert(){
-        alert("Added succesfully!")
-    }
-</script>
+    <div class="wrapper">
+        <h1>Todo App</h1>
+
+        <div class="task-input">
+            <input type="text" id="todoInput" placeholder="Add new task">
+            <button onclick="addTodo()">Add</button>
+        </div>
+
+        <div class="todo-item">
+            <input type="checkbox">
+            <span>Study CSS</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+        
+        <div class="todo-item-completed">
+            <input type="checkbox" checked>
+            <span>Complete github profile</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+        
+        <div class="todo-item">
+            <input type="checkbox">
+            <span>Daily notes</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+
+        <div class="todo-item-completed">
+            <input type="checkbox" checked>
+            <span>Linux</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+        
+        <div class="todo-item">
+            <input type="checkbox">
+            <span>Study</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+        
+        <div class="todo-item-completed">
+            <input type="checkbox" checked>
+            <span>Asignment</span>
+            <button class="delete-btn">Delete</button>
+        </div>
+
+        <div class="count-task">
+            <p>3 Tasks remaining</p>
+        </div>
+    </div>
+
+    <script>
+        let todo =[];
+
+        function addTodo() {
+            alert("Added successfully!");
+            const input = document.getElementById('todoInput');
+            const text = input.value;
+
+            if(text) {
+                todo.push( {text: text, completed: false});
+                input.value = ' ';
+            }
+        }
+
+    </script>
 </body>
 </html>
