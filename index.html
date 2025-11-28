@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=decice-width, initial-scale=1.0">
     <title>Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -9,66 +10,17 @@
     <div class="wrapper">
         <h1>Todo App</h1>
 
-        <div class="task-input">
+        <div class="input-task">
             <input type="text" id="todoInput" placeholder="Add new task">
             <button onclick="addTodo()">Add</button>
         </div>
 
-        <div class="todo-item">
-            <input type="checkbox">
-            <span>Study CSS</span>
-            <button class="delete-btn">Delete</button>
-        </div>
+        <div id="todoList"> </div>
         
-        <div class="todo-item-completed">
-            <input type="checkbox" checked>
-            <span>Complete github profile</span>
-            <button class="delete-btn">Delete</button>
-        </div>
-        
-        <div class="todo-item">
-            <input type="checkbox">
-            <span>Daily notes</span>
-            <button class="delete-btn">Delete</button>
-        </div>
-
-        <div class="todo-item-completed">
-            <input type="checkbox" checked>
-            <span>Linux</span>
-            <button class="delete-btn">Delete</button>
-        </div>
-        
-        <div class="todo-item">
-            <input type="checkbox">
-            <span>Study</span>
-            <button class="delete-btn">Delete</button>
-        </div>
-        
-        <div class="todo-item-completed">
-            <input type="checkbox" checked>
-            <span>Asignment</span>
-            <button class="delete-btn">Delete</button>
-        </div>
-
         <div class="count-task">
-            <p>3 Tasks remaining</p>
+            <p><span id="count">0</span> Tasks remaining</p>
         </div>
     </div>
-
-    <script>
-        let todo =[];
-
-        function addTodo() {
-            alert("Added successfully!");
-            const input = document.getElementById('todoInput');
-            const text = input.value;
-
-            if(text) {
-                todo.push( {text: text, completed: false});
-                input.value = ' ';
-            }
-        }
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
